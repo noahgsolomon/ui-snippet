@@ -105,7 +105,7 @@ export default function MultiStep() {
   const variants = {
     initial: (custom: number) => ({
       x: `${100 * custom}%`,
-      filter: "blur(3px)",
+      filter: "blur(2.5px)",
       opacity: 0,
     }),
     animate: () => ({
@@ -122,7 +122,7 @@ export default function MultiStep() {
 
   return (
     <div className="h-[400px] flex items-center">
-      <MotionConfig transition={{ type: 'spring', bounce: 0, duration: 0.6 }}>
+      <MotionConfig transition={{ type: 'spring', bounce: 0, duration: 0.4 }}>
         <motion.div
           animate={{ height }}
           className="relative flex flex-col max-w-[460px] w-full bg-[#fafafa] rounded-2xl overflow-hidden
