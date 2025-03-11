@@ -115,7 +115,7 @@ export default function MultiStep() {
     }),
     exit: (custom: number) => ({
       x: `${-100 * custom}%`,
-      filter: "blur(3px)",
+      filter: "blur(2.5px)",
       opacity: 0,
     }),
   };
