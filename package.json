@@ -9,7 +9,7 @@
     "lint": "next lint",
     "format": "prettier **/*.{ts,tsx} --write",
     "lint-staged": "prettier --write --ignore-unknown",
-    "prepare": "husky"
+    "prepare": "npx husky install"
   },
   "dependencies": {
     "@number-flow/react": "^0.5.8",
