@@ -1,6 +1,6 @@
 import { RefObject, useEffect, useState } from 'react';
 
-const useMeasure = ({ ref }: { ref: RefObject<null>; }) => {
+const useMeasure = ({ ref }: { ref: RefObject<null> }) => {
   const [height, setHeight] = useState(0);
 
   useEffect(() => {

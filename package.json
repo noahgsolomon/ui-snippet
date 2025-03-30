@@ -6,17 +6,23 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier **/*.{ts,tsx} --write",
+    "lint-staged": "prettier --write --ignore-unknown",
+    "prepare": "husky"
   },
   "dependencies": {
+    "@number-flow/react": "^0.5.8",
     "@radix-ui/react-visually-hidden": "^1.1.2",
     "clsx": "^2.1.1",
+    "input-otp": "^1.4.2",
     "lucide-react": "^0.479.0",
     "motion": "^12.4.10",
-    "next": "15.2.1",
+    "next": "^15.2.4",
     "radix-ui": "^1.1.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "sonner": "^2.0.2",
     "tailwind-merge": "^3.0.2"
   },
   "devDependencies": {
@@ -27,6 +33,10 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.1",
+    "lint-staged": "^15.5.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-sort-imports": "^1.8.6",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import Image from "next/image";
-import { Dialog } from "radix-ui";
-import { motion, AnimatePresence, MotionConfig } from "framer-motion";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
-import { X } from "lucide-react";
+import { motion, AnimatePresence, MotionConfig } from 'framer-motion';
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
+import { Dialog } from 'radix-ui';
+import { X } from 'lucide-react';
+import { useState } from 'react';
+import Image from 'next/image';
 
 const MotionImage = motion.create(Image);
 
@@ -13,13 +13,15 @@ export default function ImagePreview() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative flex flex-col w-[260px] rounded-xl border border-black/10">
-      <MotionConfig transition={{ type: "spring", stiffness: 300, damping: 30, mass: 1, duration: 0.6 }}>
+    <div className="relative flex w-[260px] flex-col rounded-xl border border-black/10">
+      <MotionConfig
+        transition={{ type: 'spring', stiffness: 300, damping: 30, mass: 1, duration: 0.6 }}
+      >
         <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
           <Dialog.Trigger asChild>
             <motion.div
               layoutId="image-preview-dialog"
-              className="z-10 relative cursor-pointer w-full aspect-video rounded-lg"
+              className="relative z-10 aspect-video w-full cursor-pointer rounded-lg"
               role="button"
             >
               <MotionImage
@@ -37,7 +39,7 @@ export default function ImagePreview() {
                 <>
                   <Dialog.Overlay asChild>
                     <motion.div
-                      className="fixed inset-0 h-full w-full backdrop-blur-xs z-40"
+                      className="fixed inset-0 z-40 h-full w-full backdrop-blur-xs"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
@@ -50,7 +52,7 @@ export default function ImagePreview() {
                       </VisuallyHidden>
                       <motion.div
                         layoutId="image-preview-dialog"
-                        className="relative w-[720px] aspect-video bg-gray-200 overflow-hidden rounded-2xl"
+                        className="relative aspect-video w-[720px] overflow-hidden rounded-2xl bg-gray-200"
                         role="dialog"
                         aria-modal="true"
                       >
@@ -66,7 +68,7 @@ export default function ImagePreview() {
                             type="button"
                             role="button"
                             aria-label="Close dialog"
-                            className="absolute top-3 right-3 h-fit w-fit p-[6px] rounded-full backdrop-blur z-10 bg-white/20 border border-white/20 hover:bg-white/50 focus-visible:outline-none"
+                            className="absolute top-3 right-3 z-10 h-fit w-fit rounded-full border border-white/20 bg-white/20 p-[6px] backdrop-blur hover:bg-white/50 focus-visible:outline-none"
                           >
                             <X size={20} color="white" />
                           </button>
