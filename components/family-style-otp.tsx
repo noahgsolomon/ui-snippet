@@ -34,7 +34,7 @@ function AnimatedNumber({ value, placeholder }: AnimatedNumberProps) {
   );
 }
 
-function Slot(props: SlotProps & { isShaking?: boolean }) {
+function Slot(props: SlotProps & { isShaking?: boolean; }) {
   const placeholderChar = '0';
 
   return (
@@ -127,6 +127,7 @@ export default function FamilyStyleOTP() {
           onKeyDown={(e) => {
             if (e.key === 'Enter') {
               e.preventDefault();
+              if (value.length < 6) return;
               handleSubmit();
             }
           }}

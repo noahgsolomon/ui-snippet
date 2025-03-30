@@ -101,8 +101,8 @@ const StepThree = () => {
 };
 
 export default function MultiStep() {
-  const [currentStep, setCurrentStep] = useState<number>(0);
-  const [clickDirection, setClickDirection] = useState<number>(1);
+  const [currentStep, setCurrentStep] = useState(0);
+  const [clickDirection, setClickDirection] = useState(1);
   const ref = useRef(null);
   const { height } = useMeasure({ ref });
 
