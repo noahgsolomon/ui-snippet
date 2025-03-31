@@ -1,36 +1,69 @@
+<p align="center">
+  <picture>
+    <img src="app/icon.svg" alt="Snippet logo" width="64"/>
+  </picture>
+</p>
+
+# Snippet
+
+Collections of ui components built by smintfy. Feel free to play with them.
+
+## Tech Stack
+
+Snippet is primarily built with Next.js, React, TypeScript, TailwindCSS, and Motion.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## Motivation
 
-First, run the development server:
+Snippet is built as a playground for learning and experiment. By open sourcing the code, I hope other people can learn from it as well.
+
+### Inspiration
+
+These are some of the people that has been inspiring me to improve my design engineering skills.
+
+- [Emil Kowalski](https://x.com/emilkowalski_)
+- [Mariana Castilho](https://x.com/mrncst)
+- [Jakub Krehel](https://x.com/jakubkrehel)
+- More soon...
+
+And here are some apps that inspire me.
+
+- [Family](https://family.co/)
+- More soon...
+
+## Contributing
+
+Contributions are welcomed, If you find a bug or have a feature request, feel free to create an [issue](https://github.com/Smintfy/ui-snippet/issues) or submit a [PR](https://github.com/Smintfy/ui-snippet/pulls).
+
+### Getting started with development
+
+You can fork and clone the repository to your local machine if you want to contribute or you can just clone the repository if you want to play around.
+
+```bash
+# clone your forked repo
+git clone https://github.com/your-username/ui-snippet.git
+
+# or just clone it without fork
+git clone https://github.com/smintfy/ui-snippet.git
+```
+
+Navigate to the project directory
+
+```bash
+cd ui-snippet
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

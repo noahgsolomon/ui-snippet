@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier **/*.{ts,tsx} --write",
+    "format": "prettier --write \"**/*.{ts,tsx}\"",
     "lint-staged": "prettier --write --ignore-unknown",
     "prepare": "npx husky install"
   },
