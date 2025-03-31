@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { useEffect, useRef, useState } from 'react';
 import { OTPInput, SlotProps } from 'input-otp';
-import { Toaster, toast } from 'sonner';
+import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
 
 interface AnimatedNumberProps {
@@ -48,7 +48,7 @@ function Slot(props: SlotProps & { isShaking?: boolean; }) {
           layoutId="indicator"
           className={cn(
             'absolute inset-0 z-10 rounded-[10px] border-3',
-            props.isShaking ? 'border-red-400' : 'border-blue-400',
+            props.isShaking ? 'border-rose-400' : 'border-blue-400',
           )}
           transition={{ duration: 0.12, ease: 'easeInOut' }}
         />
@@ -100,7 +100,6 @@ export default function FamilyStyleOTP() {
 
   return (
     <div className="my-6 flex flex-col">
-      <Toaster duration={6000} />
       <div className="mb-6">
         <h2 className="mb-1 text-xl font-semibold text-[#232323]">Verification Code</h2>
         <p className="text-sm text-[#737373]">We&apos;ve sent you a verification code.</p>
@@ -166,7 +165,7 @@ export default function FamilyStyleOTP() {
           {errorMessage && (
             <motion.p
               key="error-message"
-              className="flex h-[28px] w-fit items-center rounded-full bg-red-50 px-2.5 text-[13px] font-medium text-red-500"
+              className="flex h-[28px] w-fit items-center rounded-full bg-rose-50 px-2.5 text-[13px] font-medium text-rose-500"
               initial={{ scale: 0.2, opacity: 0, x: -80 }}
               animate={{ scale: 1, opacity: 1, x: 0 }}
               exit={{ scale: 0.2, opacity: 0, x: -80 }}
@@ -177,22 +176,21 @@ export default function FamilyStyleOTP() {
           )}
         </AnimatePresence>
       </div>
-      <motion.button
+      <button
         disabled={disableSubmitButton}
         onClick={() => {
           handleSubmit();
         }}
         className={cn(
           'h-[40px] w-full cursor-pointer rounded-full bg-blue-400 font-semibold text-white select-none disabled:cursor-not-allowed disabled:bg-blue-400/40',
+          'transition-transform transform duration-200 ease-out active:scale-95 hover:scale-95 disabled:scale-100',
           isVerifying
             ? 'text-[#b3b3b3] disabled:bg-[#f0f0f0]'
             : 'bg-blue-400 disabled:bg-blue-400/40',
         )}
-        transition={{ type: 'spring', stiffness: 500, damping: 20 }}
-        whileTap={{ scale: 0.95 }}
       >
         {isVerifying ? 'Verifying' : 'Submit'}
-      </motion.button>
+      </button>
     </div>
   );
 }

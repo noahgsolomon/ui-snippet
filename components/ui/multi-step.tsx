@@ -3,6 +3,7 @@
 import { motion, MotionConfig, AnimatePresence } from 'motion/react';
 import { useMemo, useRef, useState } from 'react';
 import useMeasure from '@/hooks/use-measure';
+import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
 
 const PrimaryButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({
@@ -181,6 +182,9 @@ export default function MultiStep() {
                   aria-label="Go to next step"
                   onClick={() => {
                     if (currentStep === 2) {
+                      toast.message('Onboarding completed', {
+                        description: 'Now you know what to do.',
+                      });
                       setCurrentStep(0);
                       return;
                     }
