@@ -1,6 +1,7 @@
 <p align="center">
   <picture>
-    <img src="app/icon.svg" alt="Snippet logo" width="64"/>
+    <source srcset="public/light-icon.svg" media="(prefers-color-scheme: dark)">
+    <img src="public/dark-icon.svg" alt="Snippet Logo" width="64"/>
   </picture>
 </p>
 
