@@ -29,19 +29,19 @@ const components: ComponentContainerProps[] = [
     name: 'Family style OTP',
     description: (
       <>
-        Recreating OTP component from&nbsp;
+        Recreating OTP component from{' '}
         <a
           href="https://x.com/benjitaylor/status/1900685689400029562"
           target="_blank"
           className="underline"
         >
           Family
-        </a>
-        &nbsp;built on top of&nbsp;
+        </a>{' '}
+        built on top of{' '}
         <a href="https://input-otp.rodz.dev" target="_blank" className="underline">
           otp-input
-        </a>
-        &nbsp;by guilhermerodz.
+        </a>{' '}
+        by guilhermerodz. And by the way, the correct code is {'"'}123456{'"'}.
       </>
     ),
     tags: ['react', 'motion', 'tailwind'],

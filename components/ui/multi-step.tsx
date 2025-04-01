@@ -3,8 +3,8 @@
 import { motion, MotionConfig, AnimatePresence } from 'motion/react';
 import { useMemo, useRef, useState } from 'react';
 import useMeasure from '@/hooks/use-measure';
-import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
+import { toast } from 'sonner';
 
 const PrimaryButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({
   children,
@@ -50,7 +50,7 @@ const StepOne = () => {
       <div className="flex flex-col gap-2">
         <h2 className="text-base font-semibold">This is step one</h2>
         <p className="text-[#535353]">
-          This is a multi-step component. It&apos;s a great way to guide users through a process.
+          This is a multi-step component. It{"'"}s a great way to guide users through a process.
         </p>
       </div>
       <div className="flex flex-col gap-2">
@@ -69,7 +69,7 @@ const StepTwo = () => {
       <div className="flex flex-col gap-2">
         <h2 className="text-base font-semibold">This is step two</h2>
         <p className="text-[#535353]">
-          This is a multi-step component. It&apos;s a great way to guide users through a process.
+          This is a multi-step component. It{"'"}s a great way to guide users through a process.
         </p>
       </div>
       <div className="flex flex-col gap-2">
@@ -87,7 +87,7 @@ const StepThree = () => {
       <div className="flex flex-col gap-2">
         <h2 className="text-base font-semibold">This is step three</h2>
         <p className="text-[#535353]">
-          This is a multi-step component. It&apos;s a great way to guide users through a process.
+          This is a multi-step component. It{"'"}s a great way to guide users through a process.
         </p>
       </div>
       <div className="flex flex-col gap-2">

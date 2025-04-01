@@ -18,7 +18,7 @@ export default function ComponentContainer({
       <div className="flex flex-col gap-2">
         <h2 className="font-medium">{name}</h2>
         <p className="text-[#737373]">
-          {description}&nbsp;
+          {description}{' '}
           <a className="underline" target="_blank" href={`${source}`}>
             View source
           </a>

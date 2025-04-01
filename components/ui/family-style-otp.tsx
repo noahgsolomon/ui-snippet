@@ -3,8 +3,8 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { useEffect, useRef, useState } from 'react';
 import { OTPInput, SlotProps } from 'input-otp';
-import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
+import { toast } from 'sonner';
 
 interface AnimatedNumberProps {
   value: string | null;
@@ -34,7 +34,7 @@ function AnimatedNumber({ value, placeholder }: AnimatedNumberProps) {
   );
 }
 
-function Slot(props: SlotProps & { isShaking?: boolean; }) {
+function Slot(props: SlotProps & { isShaking?: boolean }) {
   const placeholderChar = '0';
 
   return (
@@ -72,6 +72,10 @@ export default function FamilyStyleOTP() {
   }, [value]);
 
   const handleSubmit = () => {
+    // Fix for an issue where user can briefly click submit again after submitting,
+    // prevent submission if one is already in progress.
+    if (isVerifying) return;
+
     setIsVerifying(true);
     setDisableSubmitButton(true);
 
@@ -102,7 +106,7 @@ export default function FamilyStyleOTP() {
     <div className="my-6 flex flex-col">
       <div className="mb-6">
         <h2 className="mb-1 text-xl font-semibold text-[#232323]">Verification Code</h2>
-        <p className="text-sm text-[#737373]">We&apos;ve sent you a verification code.</p>
+        <p className="text-sm text-[#737373]">We{"'"}ve sent you a verification code.</p>
       </div>
       <motion.div
         animate={isShaking ? { x: [0, -5, 5, -2.5, 2.5, 0] } : { x: 0 }}
@@ -148,7 +152,7 @@ export default function FamilyStyleOTP() {
         />
       </motion.div>
       <span className="mb-3 text-[13px] text-[#737373]">
-        Didn&apos;t receive a code?&nbsp;
+        Didn{"'"}t receive a code?{' '}
         <button
           className="cursor-pointer font-medium text-blue-500"
           onClick={() => {
@@ -183,7 +187,7 @@ export default function FamilyStyleOTP() {
         }}
         className={cn(
           'h-[40px] w-full cursor-pointer rounded-full bg-blue-400 font-semibold text-white select-none disabled:cursor-not-allowed disabled:bg-blue-400/40',
-          'transition-transform transform duration-200 ease-out active:scale-95 hover:scale-95 disabled:scale-100',
+          'transform transition-transform duration-200 ease-out hover:scale-95 active:scale-95 disabled:scale-100',
           isVerifying
             ? 'text-[#b3b3b3] disabled:bg-[#f0f0f0]'
             : 'bg-blue-400 disabled:bg-blue-400/40',
