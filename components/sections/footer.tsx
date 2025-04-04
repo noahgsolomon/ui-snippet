@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="mb-8 flex justify-between text-xs text-[#b3b3b3]">
+    <footer className="z-50 mb-8 flex justify-between text-xs text-[#b3b3b3]">
       <div className="flex items-center gap-0.5">
         <div className="flex h-[18px] w-[18px] items-center">
           <svg
@@ -30,7 +30,7 @@ export default function Footer() {
         <a
           target="_blank"
           href="https://x.com/smintfy"
-          className="flex h-5 items-center gap-1 rounded-full bg-[#f5f5f5] pr-1.5 pl-0.5 hover:bg-[#f0f0f0] hover:text-[#737373]"
+          className="hover:text-tertiary flex h-5 items-center gap-1 rounded-full bg-neutral-100 pr-1.5 pl-0.5 hover:bg-[#f0f0f0]"
         >
           <Image
             alt="smintfy profile picture"

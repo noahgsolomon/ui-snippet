@@ -13,7 +13,7 @@ export default function ImagePreview() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative flex w-[260px] flex-col rounded-xl border border-black/10">
+    <div className="relative flex w-[260px] flex-col rounded-xl border">
       <MotionConfig
         transition={{ type: 'spring', stiffness: 300, damping: 30, mass: 1, duration: 0.6 }}
       >

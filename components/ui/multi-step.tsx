@@ -15,7 +15,8 @@ const PrimaryButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = (
     <button
       type="button"
       className={cn(
-        `shadow-[0px_1px_0px_0px_rgba(255,255,255,0.10)_inset, 0px_4px_8px_-2px_rgba(0,0,0,0.05), 0px_2px_4px_-1px_rgba(0,0,0,0.05)] flex h-[40px] w-fit cursor-pointer items-center rounded-lg border border-[#4F39F6] bg-gradient-to-b from-indigo-500 to-indigo-600 px-3 font-medium text-white hover:bg-gradient-to-b hover:from-indigo-500/80 hover:to-indigo-600/80`,
+        'w-fit cursor-pointer items-center rounded-lg border border-indigo-600 bg-gradient-to-b from-indigo-500 to-indigo-600 px-3 font-medium text-white hover:bg-gradient-to-b hover:from-indigo-500/80 hover:to-indigo-600/80',
+        'shadow-[0px_1px_0px_0px_rgba(255,255,255,0.10)_inset, 0px_4px_8px_-2px_rgba(0,0,0,0.05), 0px_2px_4px_-1px_rgba(0,0,0,0.05)] flex h-[40px]',
         `${className}`,
       )}
       {...props}
@@ -34,7 +35,7 @@ const SecondaryButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> =
     <button
       type="button"
       className={cn(
-        'flex h-[40px] w-fit cursor-pointer items-center rounded-lg px-3 font-medium text-[#939393]',
+        'text-tertiary flex h-[40px] w-fit cursor-pointer items-center rounded-lg px-3 font-medium',
         `${className}`,
       )}
       {...props}
@@ -49,15 +50,15 @@ const StepOne = () => {
     <>
       <div className="flex flex-col gap-2">
         <h2 className="text-base font-semibold">This is step one</h2>
-        <p className="text-[#535353]">
+        <p className="text-secondary">
           This is a multi-step component. It{"'"}s a great way to guide users through a process.
         </p>
       </div>
       <div className="flex flex-col gap-2">
-        <div className="h-5 w-2/3 rounded-md bg-[#f5f5f5]" />
-        <div className="h-5 w-1/2 rounded-md bg-[#f5f5f5]" />
-        <div className="h-5 w-3/4 rounded-md bg-[#f5f5f5]" />
-        <div className="h-5 w-1/4 rounded-md bg-[#f5f5f5]" />
+        <div className="h-5 w-2/3 rounded-md bg-neutral-100" />
+        <div className="h-5 w-1/2 rounded-md bg-neutral-100" />
+        <div className="h-5 w-3/4 rounded-md bg-neutral-100" />
+        <div className="h-5 w-1/4 rounded-md bg-neutral-100" />
       </div>
     </>
   );
@@ -68,14 +69,14 @@ const StepTwo = () => {
     <>
       <div className="flex flex-col gap-2">
         <h2 className="text-base font-semibold">This is step two</h2>
-        <p className="text-[#535353]">
+        <p className="text-secondary">
           This is a multi-step component. It{"'"}s a great way to guide users through a process.
         </p>
       </div>
       <div className="flex flex-col gap-2">
-        <div className="h-5 w-2/3 rounded-md bg-[#f5f5f5]" />
-        <div className="h-5 w-1/2 rounded-md bg-[#f5f5f5]" />
-        <div className="h-5 w-3/5 rounded-md bg-[#f5f5f5]" />
+        <div className="h-5 w-2/3 rounded-md bg-neutral-100" />
+        <div className="h-5 w-1/2 rounded-md bg-neutral-100" />
+        <div className="h-5 w-3/5 rounded-md bg-neutral-100" />
       </div>
     </>
   );
@@ -86,16 +87,16 @@ const StepThree = () => {
     <>
       <div className="flex flex-col gap-2">
         <h2 className="text-base font-semibold">This is step three</h2>
-        <p className="text-[#535353]">
+        <p className="text-secondary">
           This is a multi-step component. It{"'"}s a great way to guide users through a process.
         </p>
       </div>
       <div className="flex flex-col gap-2">
-        <div className="h-5 w-2/3 rounded-md bg-[#f5f5f5]" />
-        <div className="h-5 w-1/2 rounded-md bg-[#f5f5f5]" />
-        <div className="h-5 w-3/4 rounded-md bg-[#f5f5f5]" />
-        <div className="h-5 w-1/4 rounded-md bg-[#f5f5f5]" />
-        <div className="h-5 w-2/5 rounded-md bg-[#f5f5f5]" />
+        <div className="h-5 w-2/3 rounded-md bg-neutral-100" />
+        <div className="h-5 w-1/2 rounded-md bg-neutral-100" />
+        <div className="h-5 w-3/4 rounded-md bg-neutral-100" />
+        <div className="h-5 w-1/4 rounded-md bg-neutral-100" />
+        <div className="h-5 w-2/5 rounded-md bg-neutral-100" />
       </div>
     </>
   );
@@ -141,13 +142,16 @@ export default function MultiStep() {
       <MotionConfig transition={{ type: 'spring', bounce: 0, duration: 0.4 }}>
         <motion.div
           animate={{ height }}
-          className="relative flex w-full max-w-[460px] flex-col overflow-hidden rounded-2xl bg-[#fafafa] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.10),0px_12px_24px_-6px_rgba(51,51,51,0.03),0px_8px_16px_-4px_rgba(51,51,51,0.03),0px_4px_8px_-2px_rgba(51,51,51,0.03),0px_2px_4px_-0.5px_rgba(51,51,51,0.03)]"
+          className={cn(
+            'relative flex w-full max-w-[460px] flex-col overflow-hidden rounded-2xl bg-neutral-50',
+            'shadow-[0px_0px_0px_1px_rgba(0,0,0,0.10),0px_12px_24px_-6px_rgba(51,51,51,0.03),0px_8px_16px_-4px_rgba(51,51,51,0.03),0px_4px_8px_-2px_rgba(51,51,51,0.03),0px_2px_4px_-0.5px_rgba(51,51,51,0.03)]',
+          )}
         >
           <div ref={ref} className="h-fit w-full">
             <div className="p-1">
               <motion.div
                 layout
-                className="mb-4 overflow-hidden rounded-xl border-[0.5px] border-black/10 bg-white p-6"
+                className="border-primary/10 mb-4 overflow-hidden rounded-xl border bg-white p-6"
               >
                 <AnimatePresence mode="popLayout" initial={false} custom={clickDirection}>
                   <motion.div

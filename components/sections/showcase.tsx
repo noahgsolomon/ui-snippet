@@ -13,7 +13,7 @@ const components: ComponentContainerProps[] = [
     name: 'Image preview',
     description: <>Interaction built using shared layout animations and Radix dialog primitive.</>,
     tags: ['react', 'radix', 'motion', 'tailwind'],
-    source: 'https://github.com/Smintfy/ui-snippet/blob/main/components/image-preview.tsx',
+    source: 'https://github.com/Smintfy/ui-snippet/blob/main/components/ui/image-preview.tsx',
     children: <ImagePreview />,
   },
   {
@@ -22,7 +22,7 @@ const components: ComponentContainerProps[] = [
       <>This is a multi-step component guiding users through a process or for an onboarding.</>
     ),
     tags: ['react', 'motion', 'tailwind'],
-    source: 'https://github.com/Smintfy/ui-snippet/blob/main/components/multi-step.tsx',
+    source: 'https://github.com/Smintfy/ui-snippet/blob/main/components/ui/multi-step.tsx',
     children: <MultiStep />,
   },
   {
@@ -45,14 +45,14 @@ const components: ComponentContainerProps[] = [
       </>
     ),
     tags: ['react', 'motion', 'tailwind'],
-    source: 'https://github.com/Smintfy/ui-snippet/blob/main/components/family-style-otp.tsx',
+    source: 'https://github.com/Smintfy/ui-snippet/blob/main/components/ui/family-style-otp.tsx',
     children: <FamilyStyleOTP />,
   },
 ];
 
 export default function Showcase() {
   return (
-    <div className="mb-32 flex flex-col gap-24">
+    <div className="relative mb-32 flex flex-col gap-24">
       {components.map((component) => (
         <ComponentContainer
           key={component.name}

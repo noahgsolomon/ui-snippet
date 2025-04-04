@@ -25,7 +25,7 @@ function AnimatedNumber({ value, placeholder }: AnimatedNumberProps) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 0 }}
           transition={{ duration: 0.08, ease: 'easeInOut' }}
-          className={cn('absolute', value === null ? 'text-[#232323]/10' : 'text-[#232323]')}
+          className={cn('absolute', value === null ? 'text-primary/10' : '')}
         >
           {value ?? placeholder}
         </motion.span>
@@ -40,7 +40,7 @@ function Slot(props: SlotProps & { isShaking?: boolean }) {
   return (
     <motion.div
       layout
-      className="relative flex h-[40px] w-[36px] items-center justify-center rounded-[10px] bg-[#f7f7f7] text-base font-semibold"
+      className="text-primary bg-accent relative flex h-[40px] w-[36px] items-center justify-center rounded-[10px] text-base font-semibold"
     >
       <AnimatedNumber value={props.char} placeholder={placeholderChar} />
       {props.isActive ? (
@@ -106,7 +106,7 @@ export default function FamilyStyleOTP() {
     <div className="my-6 flex flex-col">
       <div className="mb-6">
         <h2 className="mb-1 text-xl font-semibold text-[#232323]">Verification Code</h2>
-        <p className="text-sm text-[#737373]">We{"'"}ve sent you a verification code.</p>
+        <p className="text-tertiary text-sm">We{"'"}ve sent you a verification code.</p>
       </div>
       <motion.div
         animate={isShaking ? { x: [0, -5, 5, -2.5, 2.5, 0] } : { x: 0 }}
@@ -151,7 +151,7 @@ export default function FamilyStyleOTP() {
           )}
         />
       </motion.div>
-      <span className="mb-3 text-[13px] text-[#737373]">
+      <span className="text-tertiary mb-3 text-[13px]">
         Didn{"'"}t receive a code?{' '}
         <button
           className="cursor-pointer font-medium text-blue-500"
