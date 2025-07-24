@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 import { useRef } from 'react';
 
 export default function StickyHeader() {
-  const stickyRef = useRef<HTMLDivElement>(null!);
+  const stickyRef = useRef<HTMLDivElement | null>(null);
   const isSticky = useIsSticky(stickyRef);
   const isMounted = useIsMounted();
 

@@ -1,6 +1,6 @@
 import { type RefObject, useEffect, useState } from 'react';
 
-export function useIsSticky<T extends HTMLElement>(ref: RefObject<T>) {
+export function useIsSticky<T extends HTMLElement>(ref: RefObject<T | null>) {
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
