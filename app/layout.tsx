@@ -1,3 +1,4 @@
+import { NuqsAdapter } from 'nuqs/adapters/next/app';
 import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
 import { cn } from '@/lib/utils';
@@ -20,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inter.variable, 'antialiased')}>{children}</body>
+      <NuqsAdapter>
+        <body className={cn(inter.variable, 'antialiased')}>{children}</body>
+      </NuqsAdapter>
     </html>
   );
 }
